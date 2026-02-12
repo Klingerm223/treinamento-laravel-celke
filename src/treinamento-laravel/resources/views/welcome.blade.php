@@ -25,8 +25,9 @@
     <body>
         <div class="container">
             <h1>Treinamento Laravel - Celke</h1>
-            <p> Data Atual : {{now()}} </p>
-            <p> id container : {{$containerId = file_get_contents('/etc/hostname');}} </p>
+            <p>Data Atual: {{now()->format('d/m/Y H:i:s')}} </p>
+            <p>ID do Container: {{$containerId = file_get_contents('/etc/hostname');}} </p>
+            <p>Idioma da Aplicação: {{ app()->getLocale() }}</p>
         </div>
 
     </body>
